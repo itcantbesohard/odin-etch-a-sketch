@@ -60,10 +60,10 @@ board.addEventListener("mouseover", (e) => {
 })
 
 gridSizeBtn.addEventListener("click", (e) => {
-    const input = Number(prompt("Enter grid size between 10-100"));
-    if (isNaN(input)) return;
-    if (input < 10 || input > 100) return;
-    createGrid(input);
+    size = Number(prompt("Enter grid size between 10-100"));
+    if (isNaN(size)) return;
+    if (size < 10 || size > 100) return;
+    createGrid(size);
 });
 
 gridClearBtn.addEventListener("click", (e) => {
