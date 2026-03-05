@@ -1,42 +1,48 @@
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 body {
-    background-color: black;
+    background-color: #222;
 }
 
-.container {
-    margin: 5rem auto;
-    width: 1000px;
+.monospace {
+    font-family: Consolas, "Cascadia Code", "Lucida Console", "Courier New", monospace;
 }
 
 .header {
-    background-color: maroon;
-    color: gold;
     text-align: center;
-    padding: 5px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    color: goldenrod;
+    font-weight: 900;
+    margin: 25px;
+}
+
+.control {
+    margin: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    background-color: goldenrod;
+    color: #222;
+    padding: 8px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 16px;
 }
 
 .board {
+    margin: 25px auto;
+    display: flex;
+    flex-wrap: wrap;
     background-color: #999;
     height: 500px;
-    border: 25px solid maroon;
-    border-bottom: none;
-    border-top: none;
+    width: 500px;
 }
 
-.control-panel {
-    background-color: maroon;
-    padding: 25px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-}
-
-.cell:hover {
-    background-color: #fff;
+.cell {
+    padding: 1px;
+    background-color: blue;
 }
