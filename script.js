@@ -1,19 +1,23 @@
 const container = document.querySelector(".container");
 const board = document.querySelector(".board");
 const gridSizeBtn = document.querySelector("#grid-size-btn");
+let size = 10;
 
-let size = 16;
-const boardSize = 500;
-const cellSize = boardSize / size;
+createGrid(size);
 
-setCells(size);
-
-function setCells(size) {
+function createGrid(size) {
     const cellCount = size * size;
+    const cellSize = 100 / size;
+
+    board.replaceChildren();
+
     for (let i = 0; i < cellCount; i++) {
         const cell = document.createElement("div");
         cell.className = "cell";
         cell.dataset.index = i;
+        cell.style.width = `${cellSize}%`;
+        cell.style.height = `${cellSize}%`;
+
         board.appendChild(cell);
     }
 }
@@ -35,7 +39,8 @@ board.addEventListener("mouseover", (e) => {
 })
 
 gridSizeBtn.addEventListener("click", (e) => {
-    console.log("Enter btn");
-    size = prompt("Enter grid size 10-100");
-    setCells(size);
+    const input = Number(prompt("Enter grid size between 10-100"));
+    if (isNaN(input)) return;
+    if (input < 10 || input > 100) return;
+    createGrid(input);
 });
