@@ -50,7 +50,7 @@ body {
 }
 
 .cell {
-    border: #555;
+    border: 1px solid #888;
 }
 
 .painted {

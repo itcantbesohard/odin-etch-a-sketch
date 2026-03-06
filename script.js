@@ -1,6 +1,7 @@
 let size = 50;
 let painted = 0;
 let mode = "color";
+
 const container = document.querySelector(".container");
 const board = document.querySelector(".board");
 const gridSizeBtn = document.querySelector("#grid-size-btn");
@@ -12,6 +13,7 @@ function createGrid(size) {
     const cellCount = size * size;
     const cellSize = 100 / size;
 
+    //clear board
     board.replaceChildren();
 
     for (let i = 0; i < cellCount; i++) {
